@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Matematika Bisnis</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/@hyperui/components@0.1.0/dist/hyperui.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bs5-toast@1.0.1/dist/bs5-toast.min.js"></script>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+        }
+
+        /* Navbar */
+        nav {
+            position: sticky;
+            top: 0;
+            background-color: #1e40af;
+            z-index: 10;
+        }
+
+        .navbar-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem;
+        }
+
+        .navbar-links {
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        .navbar-links a {
+            text-decoration: none;
+            color: white;
+        }
+
+        .navbar-links a:hover {
+            color: #FFD700;
+        }
+
+        /* Section Background */
+        .hero-section {
+            background-image: url('marek-piwnicki-fCKhY3Hi-1o-unsplash.jpg');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+            padding: 80px 0;
+        }
+
+        .section-title {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #4a4a4a;
+        }
+
+        .card {
+            position: relative;
+            background-size: cover;
+            background-position: center;
+            height: 250px;
+            padding: 20px;
+            color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.3s;
+            z-index: 1;
+        }
+
+        .card .content {
+            position: absolute;
+            bottom: 10px;
+            left: 20px;
+            right: 20px;
+            background-color: rgba(0, 0, 0, 0.6);
+            padding: 10px;
+            border-radius: 6px;
+        }
+
+        .card-hover:hover {
+            transform: scale(1.05);
+        }
+
+        /* Custom Sections */
+        .section {
+            padding: 80px 20px;
+        }
+
+        .section img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin-top: 20px;
+        }
+
+        .content-card {
+            background-color: #f4f4f9;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Footer */
+        footer {
+            background-color: #1e40af;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-100">
+
+    <!-- Navbar -->
+    <nav>
+        <div class="container mx-auto navbar-container">
+            <a href="#home" class="text-xl font-semibold text-white">MBS2C</a>
+            <div class="navbar-links">
+                <a href="#rangkuman">Materi</a>
+                <a href="#tugas">Tugas</a>
+                <a href="#informasi">Informasi</a>
+                <a href="#kontak">Kontak</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+        <h1 class="text-4xl font-bold">MATEMATIKA BISNIS</h1>
+        <p class="mt-4 text-lg">Tempat untuk merangkum materi perkuliahan, tugas, dan informasi lainnya.</p>
+    </section>
+
+    <!-- Rangkuman Section -->
+    <section id="rangkuman" class="section">
+        <div class="container mx-auto text-center">
+            <h2 class="section-title">Rangkuman Materi</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-8">
+                <div class="card card-hover" style="background-image: url('a1unsplash.jpg');">
+                    <div class="content">
+                        <h3 class="font-semibold text-xl mb-4">Pertemuan 1</h3>
+                        <p>Kontrak perkuliahan</p>
+                        <a href="materi1.pdf" class="text-blue-500 mt-4 inline-block" download>Download Materi</a>
+                    </div>
+                </div>
+                <!-- Add more cards as needed -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Tugas Section -->
+    <section id="tugas" class="section bg-gray-100">
+        <div class="container mx-auto text-center">
+            <h2 class="section-title">Tugas Terbaru</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-8">
+                <div class="card card-hover" style="background-image: url('a2unsplash.jpg');">
+                    <div class="content">
+                        <h3 class="font-semibold text-xl mb-4">Tugas 1</h3>
+                        <p>Deskripsi singkat tentang tugas pertama...</p>
+                    </div>
+                </div>
+                <!-- Add more tasks as needed -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Informasi Section -->
+
+    <section id="informasi" class="section">
+        <div class="container mx-auto text-center">
+            <h2 class="section-title">Informasi Perkuliahan</h2>
+            <div class="relative">
+                <img src="a3unsplash.jpg" alt="Informasi Kuliah" class="w-full h-auto rounded-lg">
+                <div
+                    class="absolute top-0 left-0 right-0 bottom-0 bg-black bg-opacity-50 text-white p-8 flex flex-col justify-center items-center">
+                    <h3 class="text-2xl font-semibold mb-4">Jadwal Kuliah</h3>
+                    <ul class="list-disc text-lg">
+                        <li class="mb-4">Jadwal Kuliah: Selasa, pukul 14:50 - 16:30</li>
+                        <li class="mb-4">Tugas : Dikumpulkan satu hari sebelum presentasi</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Kontak Section (WhatsApp link) -->
+    <section id="kontak" class="section">
+        <div class="container mx-auto text-center">
+            <h2 class="section-title">Hubungi PJ</h2>
+            <div class="relative">
+                <img src="a4unsplash.jpg" alt="Kontak" class="w-full h-auto rounded-lg">
+                <div
+                    class="absolute top-0 left-0 right-0 bottom-0 bg-black bg-opacity-50 text-white p-8 flex flex-col justify-center items-center">
+                    <p class="text-lg mb-4">Jika Anda memiliki pertanyaan, silakan hubungi saya melalui WhatsApp.</p>
+                    <a href="https://wa.me/6285753975639?text=Halo%20Admin%2C%20saya%20ingin%20menyampaikan%20perihal%20website." 
+           class="text-blue-600 text-xl font-semibold underline" target="_blank">
+            Hubungi Saya di WhatsApp
+        </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Website Perkuliahan. Semua hak dilindungi.</p>
+    </footer>
+
+    <script>
+        // JavaScript untuk Toast Message (opsional)
+        document.querySelector("form").addEventListener("submit", function (e) {
+            e.preventDefault();
+            alert("Pesan Anda telah terkirim!");
+        });
+    </script>
+
+</body>
+
+</html>
